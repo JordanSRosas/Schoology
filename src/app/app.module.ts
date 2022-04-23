@@ -4,6 +4,7 @@ import { AccessModule } from './access/access.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GaleriaModule } from './galeria/galeria.module';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AccessModule,
     HomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GaleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
