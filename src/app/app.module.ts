@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GaleriaModule } from './galeria/galeria.module';
 import { HomeModule } from './home/home.module';
+import { NominaModule } from './nomina/nomina.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeModule } from './home/home.module';
     AccessModule,
     HomeModule,
     AppRoutingModule,
-    GaleriaModule
+    GaleriaModule,
+    NominaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

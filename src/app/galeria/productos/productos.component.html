@@ -1,20 +1,11 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a class="btn btn-primary" (click) = MostrarProducto(111)>Go somewhere</a>
-    </div>
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+<div class="center">
+  <h1>Catálogo</h1> 
+</div>
+<div class="center">
+  <div class="card" style="width: 15rem;" *ngFor="let i of lista">
+    <img src="{{ i.imagen }}" class="card-img-top" alt="...">
+    <h4 class="center"> Precio: ${{ i.precio }} </h4>
+    <button type="button" class="btn btn-primary" (click)="MostrarProducto(i.id)">Ver detalles</button>
   </div>
+</div>
+ 

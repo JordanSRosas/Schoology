@@ -16,6 +16,11 @@ import { AdministrativoComponent } from './administrativo/administrativo.compone
   imports: [
     CommonModule,
     NominaRoutingModule
+  ],
+  exports: [
+    AdministrativoComponent,
+    DocentesComponent,
+    MenuNominaComponent
   ]
 })
 export class NominaModule { }

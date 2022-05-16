@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { CatalogoService } from 'src/app/catalogo.service';
 
 @Component({
   selector: 'app-productos',
@@ -8,17 +9,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductosComponent implements OnInit {
 
-  ID = '';
-  constructor(private router:Router, private Ruta:ActivatedRoute) { }
+  lista:any[]=[];
 
-  MostrarProducto(ID: Number)
+
+  constructor(private route:Router, private catalogoService:CatalogoService) {
+    this.lista=this.catalogoService.getProd();
+   }
+
+  MostrarProducto(id:number)
   {
-    this.router.navigate([ 'Productos/Producto1', ID])
-    this.router.navigate([ 'Productos/Producto2' ])
+    this.route.navigate(['productos/prod',id]);
   }
-
+  
   ngOnInit(): void {
-      this.ID = this.Ruta.snapshot.params['get']('ID') + '';
   }
 
 }

@@ -19,7 +19,8 @@ import { Prod2Component } from './prod2/prod2.component';
   ],
   exports: [
     ProductosComponent,
-    Prod1Component
+    Prod1Component,
+    Prod2Component
   ]
 })
 export class GaleriaModule { }
